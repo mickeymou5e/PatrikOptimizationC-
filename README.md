@@ -43,3 +43,54 @@ To use the Markowitz portfolio optimization algorithm in your own project, follo
    ```cpp
    #include "portfolioOptimizer.h"
    #include "matrix.h"
+# Optimizer Class Instance and Usage
+
+2. Create an instance of the `Optimizer` class, providing the desired return, number of assets, and covariance matrix as parameters:
+
+```cpp
+int desiredReturn = 10; // Example desired return
+int numberOfAssets = 5; // Example number of assets
+Matrix covarianceMatrix; // Example covariance matrix
+Optimizer optimizer(desiredReturn, numberOfAssets, covarianceMatrix);
+```
+
+3. Call the CGM method of the Optimizer object to perform the portfolio optimization and obtain the optimal weights:
+
+```std::vector<double> optimalWeights = optimizer.CGM();```
+
+## Examples
+
+Here's an example of how to use the Markowitz portfolio optimization algorithm:
+```
+#include "portfolioOptimizer.h"
+#include "matrix.h"
+
+int main() {
+    int desiredReturn = 10;
+    int numberOfAssets = 5;
+    Matrix covarianceMatrix;
+
+    // TODO: Initialize covarianceMatrix and populate it with actual data
+
+    Optimizer optimizer(desiredReturn, numberOfAssets, covarianceMatrix);
+    std::vector<double> optimalWeights = optimizer.CGM();
+
+    // TODO: Use the optimalWeights vector for portfolio allocation
+
+    return 0;
+}
+```
+
+## Contributing
+
+Contributions to this project are welcome. If you find any issues or have suggestions for improvements, please open an issue or submit a pull request on the project's GitHub repository.
+
+## License
+
+This project is licensed under the MIT License. Feel free to use, modify, and distribute the code according to the terms of the license.
+
+
+
+
+
+
