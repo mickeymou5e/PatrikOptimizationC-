@@ -47,39 +47,42 @@ To use the Markowitz portfolio optimization algorithm in your own project, follo
 
 2. Create an instance of the `Optimizer` class, providing the desired return, number of assets, and covariance matrix as parameters:
 
-```cpp
-int desiredReturn = 10; // Example desired return
-int numberOfAssets = 5; // Example number of assets
-Matrix covarianceMatrix; // Example covariance matrix
-Optimizer optimizer(desiredReturn, numberOfAssets, covarianceMatrix);
-```
+   ```cpp
+   int desiredReturn = 0.10; // Example desired return
+   int numberOfAssets = 83; // Example number of assets
+   Matrix covarianceMatrix; // Example covariance matrix
+   Optimizer optimizer(desiredReturn, numberOfAssets, covarianceMatrix);
+
 
 3. Call the CGM method of the Optimizer object to perform the portfolio optimization and obtain the optimal weights:
 
-```std::vector<double> optimalWeights = optimizer.CGM();```
+   ```cpp
+   std::vector<double> optimalWeights = optimizer.CGM();
 
 ## Examples
 
-Here's an example of how to use the Markowitz portfolio optimization algorithm:
-```
-#include "portfolioOptimizer.h"
-#include "matrix.h"
+1. Here's an example of how to use the Markowitz portfolio optimization algorithm:
 
-int main() {
-    int desiredReturn = 10;
-    int numberOfAssets = 5;
-    Matrix covarianceMatrix;
 
-    // TODO: Initialize covarianceMatrix and populate it with actual data
+   ```cpp
+   #include "portfolioOptimizer.h
+   #include "matrix.h"
+   
+   int main() 
+      {
+      int desiredReturn = 10;
+      int numberOfAssets = 5;
+      Matrix covarianceMatrix;
 
-    Optimizer optimizer(desiredReturn, numberOfAssets, covarianceMatrix);
-    std::vector<double> optimalWeights = optimizer.CGM();
+      // TODO: Initialize covarianceMatrix and populate it with actual data
 
-    // TODO: Use the optimalWeights vector for portfolio allocation
+      Optimizer optimizer(desiredReturn, numberOfAssets, covarianceMatrix);
+      std::vector<double> optimalWeights = optimizer.CGM();
 
-    return 0;
-}
-```
+      // TODO: Use the optimalWeights vector for portfolio allocation
+
+      return 0;
+      }
 
 ## Contributing
 
@@ -90,6 +93,7 @@ Contributions to this project are welcome. If you find any issues or have sugges
 This project is licensed under the MIT License. Feel free to use, modify, and distribute the code according to the terms of the license.
 
 
+ 
 
 
 
